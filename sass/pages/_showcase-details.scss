@@ -1,0 +1,46 @@
+.showcase-details{
+    .container{
+        padding: 0 30px;
+        @include breakpoint(sm){
+            padding: 0 15px;
+        }
+        .showcase-summary-details{
+            .flex-vertical-between{
+                @include breakpoint(xs){
+                    flex-direction: column;
+                }
+                h6{
+                    font-weight: 700;
+                    width:calc(100% - 200px);
+                    text-align: center;
+                    @include breakpoint(xs){
+                        width:calc(100% - 100px);  
+                    }
+                }
+            }
+        }
+        .showcase-details-wrap{
+            img{
+                width: 100%;
+                max-height: 500px;
+            }
+        }
+        .showcase-details-wrap-sm{
+            img{
+                width: 100%;
+                max-height: 320px;
+            }
+        }
+    }
+    .comments-section{
+        padding-top: 0;
+    
+    .latest-comments{
+
+        padding:0;
+        background-color: rgba($color: $brand-color, $alpha: 0.05);        
+    }
+  
+    
+}
+}

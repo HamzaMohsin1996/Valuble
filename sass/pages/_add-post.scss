@@ -1,0 +1,295 @@
+.create-post {
+  .user-profile {
+    img {
+      max-width: 55px;
+    }
+    p {
+      margin: 0;
+      padding-left: 10px;
+      font-weight: 500;
+    }
+  }
+  .custom-box {
+    .flex-vertical-between {
+      align-items: flex-start;
+      padding: 0 20px;
+      @include breakpoint(xs) {
+        padding: 0 10px;
+      }
+    }
+    h6 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    span {
+      font-size: 11px;
+    }
+    .slideshow-collector {
+      border-top: 1px solid $light-grey-clr;
+      padding: 15px 20px;
+      @include breakpoint(xs) {
+        padding: 10px;
+      }
+      .view-more {
+        display: none !important;
+        &.show-more {
+          display: flex !important;
+        }
+      }
+      p {
+        word-break: break-all;
+        max-height: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include custom-transition;
+        &.active {
+          max-height: 100%;
+        }
+      }
+      .interest-wrap {
+        padding: 15px 0;
+
+        @include flex-center;
+        text-align: center;
+        position: relative;
+        img {
+          max-width: 45px;
+          max-height: 45px;
+          border-radius: 50%;
+          margin: 0 auto 1rem !important;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          color: $grey-dark-clr;
+          display: block;
+          @include breakpoint(xs) {
+            font-size: 12px;
+          }
+        }
+        .interest-wrap-inner {
+          min-width: 33.33%;
+        }
+        .slideshow-btns {
+          .slide-show-btn {
+            top: 30%;
+            background-color: transparent;
+            font-size: 22px;
+            &:hover {
+              color: $blue-clr;
+            }
+            &.left {
+              left: -10px;
+            }
+            &.right {
+              right: -10px;
+            }
+          }
+        }
+      }
+      .view-more {
+        @include flex-vertical-center;
+        justify-content: flex-end;
+        .yellow-link {
+          font-size: 14px;
+          color: $blk-clr;
+          font-weight: 500;
+          &::before {
+            background-color: $blk-clr;
+          }
+        }
+      }
+    }
+    .custom-box-grid {
+      padding: 20px;
+    }
+  }
+  .action-dropdown {
+    .dropdown-menu.show {
+      left: -80px !important;
+      @include breakpoint(lp) {
+        left: -60px !important;
+      }
+    }
+  }
+  .post-btn-actions {
+    padding: 20px 0;
+    @include breakpoint(xs) {
+      padding: 10px 0;
+    }
+    .btn-icon {
+      @include flex-center;
+      flex-direction: column;
+      align-items: flex-start;
+      @include breakpoint(md) {
+        flex-direction: row;
+      }
+      @include breakpoint(sm) {
+        flex-direction: column;
+      }
+      .btn-icon-inner {
+        margin-bottom: 0.5rem;
+        @include breakpoint(md) {
+          margin-right: 10px;
+        }
+        @include breakpoint(sm) {
+          margin-right: 0;
+          margin-left: 10px;
+          margin-bottom: 0;
+        }
+        &.showcase {
+          &::before {
+            content: "\f00a";
+          }
+        }
+      }
+    }
+  }
+  .create-post-sec {
+    padding: 0;
+    .latest-comments-wrapper {
+      border: none;
+      .latest-comment-text {
+        padding: 0;
+        .custom-field {
+          padding: 10px 15px;
+          border: none;
+          textarea {
+            padding-right: 35px !important;
+          }
+          &:hover {
+            border: none;
+          }
+        }
+      }
+    }
+    .latest-comment-action {
+      padding: 10px 15px;
+      border-top: 1px solid $light-grey-clr;
+      @include flex-vertical-between;
+      .comment-action-btns {
+        p {
+          color: $dark-grey-clr;
+          padding-right: 15px;
+        }
+        .add-post {
+          margin: 0 10px;
+          .fa-link {
+            transform: rotate(95deg);
+          }
+          &::before {
+            @include underline-link;
+          }
+          &:hover {
+            &::before {
+              @include underline-link-after;
+            }
+          }
+        }
+      }
+      .post-btn {
+        .custom-btn {
+          font-size: 14px;
+          min-width: 90px;
+          font-weight: 400;
+          @include breakpoint(xs) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .input-url {
+      border: none;
+    }
+  }
+  .filters {
+    .post-radio-btns {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 0;
+      padding: 15px 0;
+      max-width: 100%;
+    }
+    .custom-flex {
+      h4 {
+        font-weight: normal;
+      }
+      .yellow-link {
+        font-weight: 400;
+      }
+    }
+  
+  }
+
+  .post-radio-btns {
+    @include flex-vertical-center;
+    justify-content: space-between;
+    @include breakpoint(sm) {
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    @include custom-width;
+    margin-bottom: 1.5rem;
+  }
+  .post-sec {
+    margin-top: 1rem;
+    padding: 1rem 0 0;
+    .user-profile {
+      .custom-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+        @include breakpoint(sm) {
+          justify-content: flex-start !important;
+          padding-left: 0px;
+        }
+        p {
+          padding-left: 0;
+          span {
+            color: $blk-clr;
+            font-size: 18px;
+            @include breakpoint(lp) {
+              font-size: 16px;
+            }
+          }
+        }
+        span {
+          font-size: 14px;
+          color: $light-grey-clr;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      max-height: 450px;
+    }
+    .comment-action-wrapper {
+      padding: 10px;
+      border-bottom: none;
+      border-top: 1px solid $dark-grey-clr;
+      margin-top: 10px;
+    }
+  }
+  .showmore-btn {
+    @include flex-vertical-center;
+    margin: 2rem 0 1rem;
+    .custom-btn {
+      padding: 12px 45px 10px 15px;
+      position: relative;
+      i {
+        position: absolute;
+        padding: 14px 15px;
+        right: 0;
+        font-size: 20px;
+        background: $brand-secondary-color;
+        top: 0;
+      }
+      &:hover {
+        i {
+          background: transparent;
+        }
+      }
+    }
+  }
+}

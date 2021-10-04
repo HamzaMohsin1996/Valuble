@@ -1,0 +1,9 @@
+.big-logo-wrapper{
+    padding-bottom: 150px;
+    @include breakpoint (lp){
+        padding-bottom: 70px; 
+    }
+    img{
+        max-width: 480px;
+    }
+}

@@ -1,0 +1,27 @@
+.upload-text{
+    font-size:20px;
+    margin-bottom:1.5rem;
+    color:$light-grey-clr;
+    @include breakpoint(lp){
+        font-size: 16px;
+      }
+      @include breakpoint(lg){
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+      }
+      @include breakpoint(md){
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+      }
+      @include breakpoint(sm){
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+      }
+}
+.download-btn{
+  .yellow-link-active{
+    @include breakpoint (xs) {
+      font-size:13px;
+    }
+  }
+}

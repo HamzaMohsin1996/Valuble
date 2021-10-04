@@ -1,0 +1,46 @@
+.search-section{
+    padding-top: 0;
+    .custom-search{
+        @include breakpoint(xs){
+            flex-direction: column;
+        }
+    }
+        .search-filters{
+            padding: 20px;
+            .filters-head{
+                margin-bottom: 20px;
+                h6{
+                    font-weight: 400;
+                }
+                .yellow-link{
+                    font-weight: 400;
+                }
+            }
+            .search-btn{
+                justify-content: center;
+                padding: 40px 0 20px    ;
+            }     
+        }
+        .custom-btn{
+            background-color: $brand-color;
+            &:hover{
+                cursor: pointer;
+                color: $brand-color;
+                border: 1px solid $brand-color;
+                background-color: transparent;
+            }
+            @include breakpoint(xs){
+                margin: 20px 0 0;
+            } 
+        }
+        .search-mt{
+            margin: 0;
+            @include breakpoint(md){
+                margin-top: 1rem;
+            }
+            @include breakpoint(sm){
+                margin-top: 1rem;
+            }
+        }
+    }
+     

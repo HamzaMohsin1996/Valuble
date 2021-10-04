@@ -1,0 +1,34 @@
+.collector-profile{
+    .collector-profile{
+        h5{
+            font-weight: 700;
+        }
+    }
+    .custom-box{
+        .flex-vertical-between{
+            align-items: flex-start;
+            .collector-profile{
+                padding:10px 0  20px;
+                h5{
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+    .collections-wrap{
+        margin: 0 !important;
+        justify-content: flex-end !important;
+        border-top: none !important;
+        .comment-action-btns{
+            .social-media-links{
+                font-size: 20px;
+                margin: 0;
+                padding-right: 5px;
+                i{
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}

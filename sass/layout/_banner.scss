@@ -1,0 +1,51 @@
+.banner{
+    min-height: 300px;
+    max-height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0;
+    &.home{
+        background-color: #2A2D30;
+        
+        .img-wrapper{
+            max-width: 500px;
+            border-bottom-right-radius: 50px;
+            min-height: 300px;
+        }
+    }
+    .banner-inner-content{
+        min-height: 300px;
+        max-height: 300px;
+        padding: 0 30px; 
+        max-width: 620px;
+        .banner-content{
+            h2{
+                font-size: 48px;
+                color: $white-clr;
+                @include breakpoint(md){
+                    font-size: 42px;
+                }
+                @include breakpoint(sm){
+                    font-size: 34px;
+                }
+                @include breakpoint(xs){
+                    font-size: 26px;
+                }
+                span{
+                    color: $brand-color;
+                    padding-right: 10px;
+                }
+            }
+            .custom-btn{
+                margin-top: 1.5rem;
+                @include breakpoint(sm){
+                    margin-top: 1rem;
+                }
+                @include breakpoint(xs){
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}

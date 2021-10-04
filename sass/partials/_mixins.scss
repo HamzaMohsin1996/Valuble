@@ -1,0 +1,109 @@
+
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+
+@mixin card-shadow () {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+  -moz-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+@mixin outline-shadow () {
+   box-shadow:  0 1px 4px rgba(0,0,0,0.3);
+   -moz-box-shadow: i 0 1px 4px rgba(0,0,0,0.3);
+   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+   -o-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+@mixin flex-center () {
+  display:flex;
+  align-items: center;
+}
+@mixin flex-vertical-center(){
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-vertical-between(){
+  @include flex-center;
+  justify-content: space-between;
+}
+@mixin  flex-item-end () {
+  @include flex-center;
+  justify-content: flex-end;
+}
+
+@mixin custom-transition () {
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+   transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+
+@mixin underline-link () {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+@mixin underline-link-after (){
+  -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+        transform-origin: left top;
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1)
+}
+@mixin top-layer(){
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:$blk-clr-rgba;
+}
+@mixin center-position-left(){
+  position: absolute;
+  left: 0;
+  top:40%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+@mixin center-position-right(){
+  position: absolute;
+  right: 0;
+  top:40%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+@mixin custom-width(){
+  max-width: 540px;
+  margin:0 auto;
+}
+@mixin custom-inline-flex(){
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin custom-loader{
+  animation: loader 1s linear infinite;
+}
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}

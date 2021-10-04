@@ -1,0 +1,85 @@
+.showcase-listing{
+        padding: 0 0 50px;
+        .showcase-listing-wrapper{
+            padding: 50px 0;
+            margin-top: 25px;
+            @include breakpoint(lg){
+                padding: 40px 0 ;
+            }
+            @include breakpoint(md){
+                padding: 30px 0 0;
+            }
+            @include breakpoint(sm){
+                padding: 20px 0 0;
+            }
+            @include breakpoint(xs){
+                padding: 15px 0 0;
+            }
+            &:nth-child(1){
+                margin-top: 0;
+            }
+        }
+        
+            
+        .img-wrapper{
+            min-height: 370px;
+            @include breakpoint(lp){
+                min-height: 300px;
+            }
+            @include breakpoint(lg){
+                min-height: 250px;
+            }
+            @include breakpoint(md){
+                min-height: 200px;
+            }
+        }
+        .custom-flex-box{
+            @include flex-center;
+            flex-direction: column;
+            height: 100%;
+            .comment-action-wrapper{
+                width: 100%;
+            }
+        }
+        .showcase-listing-details{
+            min-height: calc(100% - 60px);
+             height: 100%;
+             padding: 0 20px ;
+             h3{
+                 @include breakpoint(lg){
+                     font-size: 20px;
+                 }
+                 @include breakpoint(xs){
+                    font-size: 16px;
+                }
+             }
+             .custom-link-blk{
+                color: $light-grey-clr;
+                @include flex-center;
+              
+                &::before{
+                    background-color: $blk-clr;
+                     @include underline-link;
+                }
+                &:hover{
+                    color: $blk-clr;
+                    &::before{
+                        @include underline-link-after;
+                    }
+                }
+                @include breakpoint(xs){
+                    margin-left: auto;
+                 }
+                i{
+                    font-size: 26px;
+                    padding-left: 10px;
+                    color: $blk-clr;
+                    font-weight: 700;
+                    @include breakpoint(xs){
+                        font-size: 20px;
+                        padding-left: 5px;                
+                    }
+                }
+            }
+        }
+}

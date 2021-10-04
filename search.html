@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1,  shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+  <link href="./sass/vendor/drop/image-uploader.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  <title>Search</title>
+  <link rel="stylesheet" href="./style-en.css">
+
+</head>
+
+<body>
+  <div class="header box-shadow">
+    <div class="custom-container">
+       <div class="custom-flex">
+          <a href="#" id="nav-icon2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          </a>
+          <a href="javascript:void(0)" class="logo-btn">
+          <img src="./images/logo.png" alt="Logo Image">
+          </a>
+          <div class="custom-flex">
+             <ul class="header-ul sidebar-mobile">
+                <li ><a href="CreatePost.html" class="header-links">News Feed</a></li>
+                <li class="active"><a href="search.html" class="header-links">Search</a></li>
+                <li ><a href="collector-profile.html" class="header-links">Profile</a></li>
+                <li>
+                   <div class="dropdown show custom-dropdown action-dropdown slideshow-collector-dropdown icon-btn">
+                      <a href="javascript:void(0)" class="add-asset-link dropdown-toggle"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-plus">
+                      </i>
+                      </a>
+                      <div class="dropdown-menu left-none" aria-labelledby="dropdownMenuLink">
+                         <a class="dropdown-item" href="AddAssets.html"><i class="fa fa-plus"></i> Add Valuble</a>
+                         <a class="dropdown-item" href="AddShowcase.html"> <i class="fa fa-th"></i> Add Showcase</a>
+                         <a class="dropdown-item" href="CreatePost.html"> <i class="fa fa-pencil"></i> Add Post</a>
+                      </div>
+                   </div>
+                </li>
+             </ul>
+             <ul class="header-ul">
+                <li >
+                   <div class="dropdown show custom-dropdown">
+                      <a class="add-asset-link big-square dropdown-toggle" href="#" role="button" id="dropdownMenuLink-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-user"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink-2">
+                         <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-user"></i> John Doe</a>
+                         <a class="dropdown-item" href="javascript:void(0)"> <i class="fa fa-cog"></i> Settings</a>
+                         <a class="dropdown-item" href="javascript:void(0)"> <i class="fa fa-sign-out "></i>Log Out</a>
+                      </div>
+                   </div>
+                </li>
+             </ul>
+          </div>
+       </div>
+    </div>
+ </div>
+  <div class="main-wrapper create-post">
+      <div class="container">
+         <section class="search-section">
+           <div class="container">
+            <div class="custom-flex-center custom-search">
+              <div class="search-icon">
+              <input class="search" type="text" placeholder="Search (Keyword)"/>
+              <i class="fa fa-search"></i>
+              </div>
+              <input type="submit"  class="custom-btn"  value="Search" />
+            </div>
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="custom-box search-filters">
+                  <div class="custom-flex filters-head">
+                    <h6>Filters</h6>
+                    <a href="javascirpt:void(0)" class="yellow-link">Reset</a>
+                  </div>
+                  <select id="type" class="custom-selectbox" name="user_state">
+                    <option value="" disabled="disabled" selected="selected">Type</option>
+                      <option value="type 1">Type 1</option>
+                      <option value="type 2">Type 2</option>
+                      <option value="type 3">Type 3</option>
+                  </select>
+                  <select id="category" class="custom-selectbox" name="user_state">
+                    <option value="" disabled="disabled" selected="selected">Category</option>
+                      <option value="cat 1">Category 1</option>
+                      <option value="cat 2">Category 2</option>
+                      <option value="cat 3">Category 3</option>
+                  </select>
+                  <input type="text" data-role="tagsinput" placeholder="Tags" />
+                  <!-- <div id="release-date" class="input-group custom-date-picker date" data-date-format="mm-dd-yyyy">
+                    <input class="custom-field" type="text" name="Release Date" value="Date" />
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                  </div> -->
+                 
+                  <div class="custom-flex search-btn">
+                    <a href="javascript:void(0)" class="custom-btn">Search</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="custom-box post-sec search-mt">
+                  <div class="flex-vertical-between">
+                    <div class="custom-flex-center user-profile">
+                      <img src="./images/user-img.png" alt="User Image">
+                      <div class="custom-flex">
+                        <div class="custom-flex post-header">
+                          <a href="profile-view.html" class="custom-black-button post-head">This person</a>
+                          <span> added 5 items to</span>
+                          <a href="profile-view.html" class="custom-black-button post-head">Superman Collection</a> 
+                       </div>
+                       <span>5 mins ago</span>
+                       </div>
+                    </div>
+                    
+                  </div>
+                  <div class="row m-0 py-3">
+                      <div class="col-lg-7 col-md-6">
+                        <p class="padding-vertical m-0 small-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                      </div>
+                      <div class="col-lg-5 col-md-6">
+                        <div  class="collection-items-details">
+                          <div class="collection-details-inner">
+                            <a href="javascipt:void(0)" class="collection-details-img" style="background-image: url(./images/iron-man-mk1.png);">
+                            </a>
+                            <div class="custom-flex-center">
+                              <a href="javascipt:void(0)" class="fav-items"><i class="fa fa-heart-o"></i></a>
+                             </div>
+                          </div>
+                          <div class="collection-details-text">
+                            <div class="custom-flex">
+                            <span>Iron Man Mk 1 Exclusive</span>
+                            <span class="normal">$325.85</span>
+                            </div>
+                            <span class="normal grey">Action Figure</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="comment-action-wrapper">
+                    <div class="comment-action-btns">
+                       <a href="javascript:void(0)" class="social-media-links"><i class="fa fa-thumbs-up"></i>Like</a>
+                       <a href="javascript:void(0)" class="social-media-links comment-btn"><i class="fa fa-comment"></i>Comment</a>
+                       <a href="javascript:void(0)" class="social-media-links" data-toggle="modal" data-target="#share-post-modal"><i class="fa fa-share"></i>Share</a>
+                    </div>
+                    <div class="comment-action-btns comments">
+                       <a href="javascript:void(0)" class="social-media-links grey">32 Likes</a>
+                       <a href="javascript:void(0)" class="social-media-links grey">32 Comments</a>
+                    </div>
+                 </div>
+                 <div class="comments-wrapper">
+                  <div class="latest-comments">
+                     <div class="latest-comments-wrapper">
+                        <div class="latest-comments-img">
+                           <img src="./images/user-img.png" alt="User Image">
+                        </div>
+                        <div class="latest-comment-text">
+                           <div class="custom-flex post-header">
+                              <a href="profile-view.html" class="custom-black-button post-head">This Person</a>
+                           </div>
+                           <span class="small-txt">5 mins ago</span>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="latest-comments-wrapper">
+                        <div class="latest-comments-img">
+                           <img src="./images/user-img.png" alt="User Image">
+                        </div>
+                        <div class="latest-comment-text">
+                           <div class="custom-flex post-header">
+                              <a href="profile-view.html" class="custom-black-button post-head">This Person</a>
+                           </div>
+                           <span class="small-txt">5 mins ago</span>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="view-more">
+                     <a href="javascript:void(0)" class="custom-black-button">VIEW MORE</a>
+                  </div>
+                  <div class="comment-writing">
+                     <div class="latest-comments-wrapper">
+                        <div class="latest-comments-img">
+                           <img src="./images/user-img.png" alt="User Image">
+                        </div>
+                        <div class="latest-comment-text">
+                           <input type="text" class="custom-field" placeholder="Write a Comment">
+                           <button class="btn-submitt"><i class="fa fa-send"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div> 
+                </div>
+                <div class="custom-box post-sec">
+                  <div class="flex-vertical-between">
+                    <div class="custom-flex-center user-profile">
+                      <img src="./images/user-img.png" alt="User Image">
+                      <div class="custom-flex">
+                        <div class="custom-flex post-header">
+                          <a href="profile-view.html" class="custom-black-button post-head">This person</a>
+                          <span> added 5 items to</span>
+                          <a href="profile-view.html" class="custom-black-button post-head">Superman Collection</a> 
+                       </div>
+                       <span>5 mins ago</span>
+                       </div>
+                    </div>
+                    
+                  </div>
+                  <div class="row m-0 py-3">
+                      <div class="col-md-6">
+                        <p class="padding-vertical m-0 small-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                      </div>
+                      <div class="col-md-6">
+                        <img src="./images/collection-img.png" alt="Collection Image"/>
+                      </div>
+                  </div>
+                  <div class="comment-action-wrapper">
+                    <div class="comment-action-btns">
+                        <a href="javascript:void(0)" class="social-media-links"><i class="fa fa-thumbs-up"></i>Like</a>
+                        <a href="javascript:void(0)" class="social-media-links"><i class="fa fa-comment"></i>Comment</a>
+                        <a href="javascript:void(0)" class="social-media-links" data-toggle="modal" data-target="#edit-post-modal"><i class="fa fa-share"></i>Share</a>
+                    </div>
+                    <div class="comment-action-btns comments">
+                      <a href="javascript:void(0)" class="social-media-links grey">32 Likes</a>
+                      <a href="javascript:void(0)" class="social-media-links grey">32 Comments</a>
+                  </div>
+                </div>
+                  <div class="comments-wrapper">
+                    <div class="latest-comments">
+                      <div class="latest-comments-wrapper">
+                          <div class="latest-comments-img">
+                            <img src="./images/user-img.png" alt="User Image">
+                          </div>
+                          <div class="latest-comment-text">
+                            <div class="custom-flex post-header">
+                                <a href="profile-view.html" class="custom-black-button post-head">This Person</a>
+                            </div>
+                            <span class="small-txt">5 mins ago</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                          </div>
+                      </div>
+                      <div class="latest-comments-wrapper">
+                          <div class="latest-comments-img">
+                            <img src="./images/user-img.png" alt="User Image">
+                          </div>
+                          <div class="latest-comment-text">
+                            <div class="custom-flex post-header">
+                                <a href="profile-view.html" class="custom-black-button post-head">This Person</a>
+                            </div>
+                            <span class="small-txt">5 mins ago</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="view-more">
+                      <a href="javascript:void(0)" class="custom-black-button">VIEW MORE</a>
+                    </div>
+                    <div class="comment-writing">
+                      <div class="latest-comments-wrapper">
+                          <div class="latest-comments-img">
+                            <img src="./images/user-img.png" alt="User Image">
+                          </div>
+                          <div class="latest-comment-text">
+                            <input type="text" class="custom-field" placeholder="Write a Comment">
+                            <button class="btn-submitt"><i class="fa fa-send"></i></button>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+           </div>
+         </section>
+      </div>
+  </div>
+  <div class="footer">
+    <div class="custom-container">
+      <div class="custom-flex border-bottom">
+        <div class="footer-social-links">
+          <a href="javascript:void(0)" class="footer-logo"><img src="./images/footer-logo.png" alt="Footer Logo"></a>
+            <ul class="social-links">
+              <li><a href="javascript:void(0)" class="social-media-links"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="javascript:void(0)" class="social-media-links"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="javascript:void(0)" class="social-media-links"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="javascript:void(0)" class="social-media-links"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="common-links">
+          <a href="javascript:void(0)" class="common-links-btns">Home Page</a>
+          <a href="CreatePost.html" class="common-links-btns">News Feed</a>
+          <a href="search.html" class="common-links-btns">Search</a>
+        </div>
+      </div>
+      <p class="copy-right-txt">©2010 - 2020 Privacy - Terms</p>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="./js/image-uploader.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous"></script>
+  <script src="js/custom.js"></script>
+
+
+
+</body>
+
+</html>

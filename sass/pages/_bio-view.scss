@@ -1,0 +1,27 @@
+.bio-view-more{
+    padding: 10px 15px 50px;
+    .edit-btn{
+        justify-content: flex-end;
+    }
+    .user-img{
+        @include flex-center;
+        justify-content: center;
+        flex-direction: column;
+        img{
+            max-width: 182px;
+            max-height: 182px;
+            border-radius: 50%;
+        }
+        h5{
+            margin: 2rem 0 1rem;
+            font-weight: 500;
+        }
+    }
+    .custom-accordian{
+        padding: 0 30px;
+        .accordian-head{
+            margin: 0 !important;
+            font-weight: 700 !important;
+        }
+    }
+}

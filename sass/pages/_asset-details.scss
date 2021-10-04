@@ -1,0 +1,55 @@
+.content-details{
+    position:relative;
+    padding:0;
+    .content-details-inner{
+        background-color: $white-clr;
+        padding:15px 30px;
+        position: relative;
+      
+        .flex-vertical-between{
+            margin-bottom: 0.75rem;
+        }
+        .tags-wrapper{
+            .custom-flex {
+                justify-content: flex-start;
+                a{
+                    max-width: 50%;
+                    font-size: 14px;
+                    margin: 0 10px 10px; 
+                    min-width: 170px;
+                    @include breakpoint(lg){
+                        margin: 0 5px 10px; 
+                        min-width: 160px; 
+                    }
+                    @include breakpoint(sm){
+                      font-size: 12px;
+                    }
+                    @include breakpoint(xs){
+                        margin: 0 0 10px; 
+                        min-width: 100%; 
+                    }
+                }
+            }
+        }
+        .post-image-preview{
+            width:100%;
+            position: relative;
+            img{
+                width:100%;
+                max-height:500px;
+                position: relative;
+            }
+            &:hover{
+                cursor: pointer;
+            @include custom-transition;
+                &::after{
+                    @include top-layer;
+                }
+            }
+        }
+        .yellow-link{
+            font-weight: 400;
+        }
+    }
+
+}

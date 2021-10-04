@@ -1,0 +1,101 @@
+.community{
+    .community-articles-wrapper{
+        min-height: calc(100vh - 260px);
+        background-color: $white-clr;
+        width: 100%;
+        padding: 50px;
+        .row{
+          .my-4{
+          @include breakpoint(sm){
+            margin-bottom: 0.75rem !important;
+            margin-top: 0.75rem !important;
+          }
+          @include breakpoint(xs){
+            margin-bottom: 0.50rem !important;
+            margin-top: 0.50rem !important;
+          }
+            
+          }
+        }
+        @include breakpoint(sm){
+            padding: 35px;
+        }
+        @include breakpoint(xs){
+            padding: 25px;
+        }
+        .section-padding{
+            padding: 40px 0;
+        }
+        .related-articles-wrap-inner{
+            margin-top: 40px;
+            .collection-items-details{
+                .collection-details-inner{
+                    overflow: hidden;
+                }
+               .collection-details-text{
+                @include card-shadow;
+               }
+            @include custom-transition;
+                &:hover{
+                    .collection-details-img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .owl-nav{
+                position: absolute;
+                top:30%;
+                width: 100%;
+                button {
+                  span{
+                    font-size: 26px;
+                    @include breakpoint(sm){
+                        font-size: 18px;
+                      }
+                      
+                  }
+                }
+                .owl-prev{
+                  float: left;
+                  max-width: 40px;
+                  min-height: 40px;
+                  width: 100%;
+                  background-color:#DADADA;
+                  border-radius: 50%;
+                  position: relative;
+                  left: -45px;
+                  border: 1px solid black;
+              
+                  @include breakpoint(sm){
+                    max-width: 25px;
+                  min-height: 25px;
+                  left: -30px;
+                  }
+                  @include breakpoint(xs){
+                    display: none;
+                   }
+                }
+                .owl-next{
+                  float: right;
+                  max-width: 40px;
+                  min-height: 40px;
+                  width: 100%;
+                  background-color:#DADADA;
+                  border-radius: 50%;
+                  position: relative;
+                  right: -45px;
+                  border: 1px solid black;
+             
+                  @include breakpoint(sm){
+                    max-width: 25px;
+                  min-height: 25px;
+                  right: -30px;
+                  }
+                  @include breakpoint(xs){
+                    display: none;
+                   }
+                }
+              }
+        }
+    }
+}

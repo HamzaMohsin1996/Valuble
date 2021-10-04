@@ -1,0 +1,107 @@
+.profile-edit{
+    .conatiner-md{
+        padding: 35px 15px 0;
+    }
+    .edit-profile{
+        position: relative;
+        p{
+            text-align: left;
+            color: $light-grey-clr;
+        }
+        .interest-wrap{
+            @include flex-center;
+            justify-content: space-between;
+            padding: 10px 0 30px;
+            .interest-wrap-inner{
+                min-width: 33.33%;
+                @include flex-center;
+                justify-content: center;
+                flex-direction: column; 
+                img{
+                    margin-bottom: 1rem;
+                    max-width: 155px;
+                    max-height: 155px;
+                    @include breakpoint(sm){
+                        max-width: 100px;
+                        max-height: 100px;
+                    }
+                    @include breakpoint(xs){
+                        max-width: 60px;
+                        max-height: 60px;
+                      }
+                } 
+                span{
+                    color: $light-grey-clr;
+                    font-size: 18px;
+                    @include breakpoint(xs){
+                        font-size: 8px;
+                    }
+                }
+            }
+            .slideshow-btns{
+                .slide-show-btn{
+                    background-color: transparent;
+                    top: 40%;
+                    color: $blk-clr;
+                    font-size: 30px;
+                    &:hover{
+                        color: $blk-clr;
+                    }
+                    &.left{
+                        left: -40px;
+                        @include breakpoint(lp){
+                            left: 0; 
+                        }
+                        @include breakpoint(lg){
+                          left: -28px; 
+                      }
+                      @include breakpoint(md){
+                        left: -35px; 
+                    }
+                    @include breakpoint(sm){
+                      left: -26px; 
+                    }
+                    @include breakpoint(mobile){
+                      left: -10px; 
+                    }
+                    @include breakpoint(xs){
+                      left: -6px; 
+                    }
+                     
+                    }
+                    &.right{
+                    right: -40px;
+                    @include breakpoint(lp){
+                        right: 0px; 
+                    }
+                    @include breakpoint(lg){
+                      right: -28px; 
+                  }
+                  @include breakpoint(md){
+                    right: -35px; 
+                }
+                @include breakpoint(sm){
+                  right: -26px; 
+                }
+                @include breakpoint(mobile){
+                  right: -10px; 
+                }
+                @include breakpoint(xs){
+                  right: -6px; 
+                }
+                    }
+                }
+                
+            }
+           
+        }
+    }
+    .add-story{
+        padding: 25px 0;
+    }
+}
+#edit-profile-modal{
+    .modal-lg{
+        max-width: 1220px; 
+}
+}
